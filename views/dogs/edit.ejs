@@ -1,0 +1,16 @@
+<body>
+    <h1>Edit <%= dog.name %></h1>
+    <form action="/dogs/<%= dog._id %>?_method=PUT" method="POST">
+    <label for="name">Name:</label>
+    <input type="text" name="name" id="name" value="<%= dog.name %>">
+    <br>
+    <label for="isReadyToPick">Ready to Pick a dog?</label>
+    <input type="checkbox" name="isReadyToPick" id="isReadyToPick"
+    <% if (dog.isReadyToPick) { %>
+        checked
+    <% } %>
+    >
+    <br>
+    <button type="submit">Update Dog</button>
+    </form>
+</body>
